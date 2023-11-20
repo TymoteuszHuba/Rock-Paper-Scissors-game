@@ -5,6 +5,7 @@ const computerChoiceIcon = document.querySelector('.computer__icon');
 const playerScore = document.querySelector('.player__score');
 const computerScore = document.querySelector('.computer__score');
 const gameBtn = document.querySelectorAll('.game__btn');
+const popup = document.querySelector('.game__popup');
 
 let computerOption = ['rock', 'paper', 'scissors'];
 
@@ -70,19 +71,25 @@ resetGame = () => {
 	computerChoiceIcon.innerHTML = `<i class="fa-solid fa-question"></i>`;
 	playerScore.textContent = '0';
 	computerScore.textContent = '0';
+    popup.classList.remove('game__popup__active');
 };
 
 const checkWinner = () => {
+	const popupText = document.querySelector('.popup__content .popup__text');
+	const popupBtn = document.querySelector('.popup__btn');
+
 	if (playerScoreCount === 5) {
-		setTimeout(() => {
-			alert('You won!');
+		popup.classList.add('game__popup__active');
+        popupText.textContent = 'You won!';
+		popupBtn.addEventListener('click', () => {
 			resetGame();
-		}, 200);
+		});
 	} else if (computerScoreCount === 5) {
-		setTimeout(() => {
-			alert('You lost...');
+		popup.classList.add('game__popup__active');
+        popupText.textContent = 'You lost...';
+		popupBtn.addEventListener('click', () => {
 			resetGame();
-		}, 200);
+		});
 	}
 };
 

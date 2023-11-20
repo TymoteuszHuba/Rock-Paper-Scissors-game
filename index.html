@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>RockPaperScissors-Game</title>
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700;900&family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- fontawesome -->
+		<script
+			src="https://kit.fontawesome.com/1387792aac.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- styles -->
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="game__header">
+			<h1 class="title">Rock paper scissors</h1>
+		</div>
+
+		<div class="game__content">
+			<h2 class="title">Choose rock, paper or scissors!</h2>
+			<p class="text">First who score 5 points wins the game</p>
+			<div class="game__players">
+				<div class="player">
+					<div class="player__icon">
+						<i class="fa-solid fa-question"></i>
+					</div>
+					<p class="player__text">Player</p>
+					<p class="player__score">0</p>
+				</div>
+				<div class="computer">
+					<div class="computer__icon">
+						<i class="fa-solid fa-question"></i>
+					</div>
+					<p class="computer__text">Computer</p>
+					<p class="computer__score">0</p>
+				</div>
+			</div>
+			<div class="game__btns">
+				<button class="game__btn" id="rock">
+					<i class="fa-solid fa-hand-fist"></i>
+				</button>
+				<button class="game__btn" id="paper">
+					<i class="fa-solid fa-hand"></i>
+				</button>
+				<button class="game__btn" id="scissors">
+					<i class="fa-solid fa-hand-peace"></i>
+				</button>
+			</div>
+		</div>
+
+        <!-- <div class="game__popup">
+            <p class="text__win">You won!</p>
+            <p class="text__lost">You lost...</p>
+            <button class=""></button>
+        </div> -->
+
+        <script src="./js/main.js"></script>
+	</body>
+</html>

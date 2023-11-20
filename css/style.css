@@ -118,57 +118,52 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100dvh;
-    display: none;
-    align-items: center;
-    justify-content: center;
+	display: none;
+	align-items: center;
+	justify-content: center;
 }
 
 .game__popup .popup--bg {
-    position: absolute;
-    width: 100%;
-    height: 100dvh;
-    background-color: var(--black);
-    opacity: 0.6;
+	position: absolute;
+	width: 100%;
+	height: 100dvh;
+	background-color: var(--black);
+	opacity: 0.6;
 }
 
 .game__popup .popup__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 200px;
-    background-color: var(--gray);
-    color: var(--white);
-    font-size: 2rem;
-    font-weight: bold;
-    border-radius: 8px;
-    z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 200px;
+	background-color: var(--gray);
+	color: var(--white);
+	font-size: 2rem;
+	font-weight: bold;
+	border-radius: 8px;
+	z-index: 1;
 }
 
 .game__popup .popup__btn {
-    margin-top: 0.5em;
-    padding: 0.3em 0.5em;
-    background-color: var(--light-gray);
-    font-size: 1.5rem;
-    color: var(--white);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+	margin-top: 0.5em;
+	padding: 0.3em 0.5em;
+	background-color: var(--light-gray);
+	font-size: 1.5rem;
+	color: var(--white);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
 }
 
 .game__popup .popup__btn:hover {
-    background-color: gray;
+	background-color: gray;
 }
-/* 
-.game__popup .text__won, .text__lost {
-    display: none;
-} */
 
 .game__popup__active {
-    display: flex;
+	display: flex;
 }
-
 
 @media (min-width: 576px) {
 	.game__header .title {

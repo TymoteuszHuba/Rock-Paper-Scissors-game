@@ -12,6 +12,7 @@ let computerOption = ['rock', 'paper', 'scissors'];
 let playerScoreCount = 0;
 let computerScoreCount = 0;
 
+// function which add correct icons after choose by user or computer
 const addChoiceIcon = (btn, compChoice) => {
 	// more simple solution than ifs
 	const iconMapping = {
@@ -24,6 +25,7 @@ const addChoiceIcon = (btn, compChoice) => {
 	computerChoiceIcon.innerHTML = iconMapping[compChoice];
 };
 
+// function game handle all moves from user and computer
 const game = (btn) => {
 	let computerChoiceRandom = Math.floor(Math.random() * computerOption.length);
 	let computerChoice = computerOption[computerChoiceRandom];
@@ -59,9 +61,12 @@ const game = (btn) => {
 		computerScoreCount++;
 		computerScore.textContent = `${computerScoreCount}`;
 	}
+
+	// call function which are check the result of game
 	checkWinner();
 };
 
+// function reseting all values of game
 resetGame = () => {
 	playerScoreCount = 0;
 	computerScoreCount = 0;
@@ -71,28 +76,30 @@ resetGame = () => {
 	computerChoiceIcon.innerHTML = `<i class="fa-solid fa-question"></i>`;
 	playerScore.textContent = '0';
 	computerScore.textContent = '0';
-    popup.classList.remove('game__popup__active');
+	popup.classList.remove('game__popup__active');
 };
 
+// function check the result of game (who win user or computer)
 const checkWinner = () => {
 	const popupText = document.querySelector('.popup__content .popup__text');
 	const popupBtn = document.querySelector('.popup__btn');
 
 	if (playerScoreCount === 5) {
 		popup.classList.add('game__popup__active');
-        popupText.textContent = 'You won!';
+		popupText.textContent = 'You won!';
 		popupBtn.addEventListener('click', () => {
 			resetGame();
 		});
 	} else if (computerScoreCount === 5) {
 		popup.classList.add('game__popup__active');
-        popupText.textContent = 'You lost...';
+		popupText.textContent = 'You lost...';
 		popupBtn.addEventListener('click', () => {
 			resetGame();
 		});
 	}
 };
 
+// function starting game after click for each btn
 const startGame = () => {
 	gameBtn.forEach((btn) => {
 		btn.addEventListener('click', () => {
@@ -101,4 +108,5 @@ const startGame = () => {
 	});
 };
 
+// call function startGame()
 startGame();
